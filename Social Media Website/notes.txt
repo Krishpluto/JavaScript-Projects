@@ -1,3 +1,5 @@
 top navbar = 22:32 => completed
 right left sidebar = 1:04:55 => completed
 middle top story section = 1:17:25 => completed   
+middle post content section and footer = 1: 57: 33 => completed
+drop down function and related js = 2:19:57 => completed

@@ -26,14 +26,65 @@
                 <img src="images/search.png">
                 <input type="text" placeholder="Search">
             </div>
-            <div class="nav-user-icon online">
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
                 <img src="images/profile-pic.png">
             </div>
         </div>
+
+        <!-- settings-menu -->
+
+        <div class="settings-menu">
+
+            <div id="dark-btn" >
+                <span></span>
+            </div>
+            
+            <div class="settings-menu-inner">
+                <div class="user-profile">
+                    <img src="images/profile-pic.png">
+                    <div>
+                        <p>Klaus Michaelson</p>
+                        <a href="#">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="user-profile">
+                    <img src="images/feedback.png">
+                    <div>
+                        <p>Give Feedback</p>
+                        <a href="#">Help us to improve new design</a>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="settings-links">
+                    <img src="images/setting.png" class="settings-icon">
+                    <a href="#">Settings & Privacy <img src="images/arrow.png" width="10px"></a>
+                </div>
+
+                <div class="settings-links">
+                    <img src="images/help.png" class="settings-icon">
+                    <a href="#">Help & Support <img src="images/arrow.png" width="10px"></a>
+                </div>
+
+                <div class="settings-links">
+                    <img src="images/display.png" class="settings-icon">
+                    <a href="#">Display & Accessibility <img src="images/arrow.png" width="10px"></a>
+                </div>
+
+                <div class="settings-links">
+                    <img src="images/logout.png" class="settings-icon">
+                    <a href="#">Logout <img src="images/arrow.png" width="10px"></a>
+                </div>
+
+            </div>
+            
+        </div>
+
     </nav>
 
 
-    <divc class="container">
+    <div class="container">
         <!--------------------------- left-sidebar --------------------------->
         <div class="left-sidebar">
             <div class="imp-links">
@@ -91,10 +142,164 @@
 
                 <div class="post-input-container">
                     <textarea rows="3" placeholder="What's on your mind, Klaus ?"></textarea>
+                    <div class="add-post-links">
+                        <a href="#"><img src="images/live-video.png"> Like Video</a>
+                        <a href="#"><img src="images/photo.png"> Photo/Video</a>
+                        <a href="#"><img src="images/feeling.png"> Feeling/Activity</a>
+                    </div>
+
                 </div>
 
             </div>
- 
+
+            <!-- 1st post in a website -->
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png">
+                        <div>
+                            <p>Klaus Michaelson</p>
+                            <span>June 25 2023, 12:40 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+              
+                <p class="post-text">This is a mockup design of a <span>Social Media Website </span> using HTML CSS JS inspired from Facebook design. <a href="#">#Design</a> <a href="#">#Development</a></p>
+                <img src="images/feed-image-1.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like-blue.png">120</div>
+                        <div><img src="images/comments.png">35</div>
+                        <div><img src="images/share.png">12</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/profile-pic.png"><i class="fa-sharp fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2nd post in a website -->
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png">
+                        <div>
+                            <p>Klaus Michaelson</p>
+                            <span>June 24 2023, 13:10 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+              
+                <p class="post-text">This is a 2nd post of a mockup design of a <span>Social Media Website </span>. <a href="#">#Design</a> <a href="#">#Development</a></p>
+                <img src="images/feed-image-2.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like.png">120</div>
+                        <div><img src="images/comments.png">35</div>
+                        <div><img src="images/share.png">12</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/profile-pic.png"><i class="fa-sharp fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3rd post in a website -->
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png">
+                        <div>
+                            <p>Klaus Michaelson</p>
+                            <span>June 23 2023, 09:00 am</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+              
+                <p class="post-text">This is a 3rd post of a mockup design of a <span>Social Media Website </span> Feel free to connect with me for any enquiries. <a href="#">#Design</a> <a href="#">#Development</a></p>
+                <img src="images/feed-image-3.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like.png">120</div>
+                        <div><img src="images/comments.png">35</div>
+                        <div><img src="images/share.png">12</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/profile-pic.png"><i class="fa-sharp fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+             <!-- 4rd post in a website -->
+
+             <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png">
+                        <div>
+                            <p>Klaus Michaelson</p>
+                            <span>June 22 2023, 16:30 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+              
+                <p class="post-text">This is a 4th post of a mockup design of a <span>Social Media Website </span> Feel free to connect with me for any enquiries. <a href="#">#Design</a> <a href="#">#Development</a></p>
+                <img src="images/feed-image-4.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like.png">120</div>
+                        <div><img src="images/comments.png">35</div>
+                        <div><img src="images/share.png">12</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/profile-pic.png"><i class="fa-sharp fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+             <!-- 5rd post in a website -->
+
+             <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png">
+                        <div>
+                            <p>Klaus Michaelson</p>
+                            <span>June 21 2023, 08:00 am</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+              
+                <p class="post-text">This is a 5th post of a mockup design of a <span>Social Media Website </span> Feel free to connect with me for any enquiries. <a href="#">#Design</a> <a href="#">#Development</a></p>
+                <img src="images/feed-image-5.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like.png">120</div>
+                        <div><img src="images/comments.png">35</div>
+                        <div><img src="images/share.png">12</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/profile-pic.png"><i class="fa-sharp fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button for load more -->
+
+            <button type="button" class="load-more-btn">Load More</button>
 
         </div>
 
@@ -164,7 +369,11 @@
             </div>
 
         </div>
-    </divc>
+    </div>
 
+    <div class="footer">
+        <p>Copyright 2023 - Kiruthiga Ramesh <i class="fa-regular fa-copyright"></i></p>
+    </div>
+<script src="script.js"></script>
 </body>
 </html>
