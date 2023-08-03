@@ -41,6 +41,7 @@ let productsHTML = '';
 
 //1.loop thru the array using for each method to generate html to store different products in the amazon.html page
 
+// 9.used Data Attribute to insert product name. it is just a HTML Attribute. it starts with "data-" then give it any name. purpose is data attribute is used to attach any information to an element
 products.forEach((product) => {
     productsHTML += `
         <div class="product-container">
@@ -62,7 +63,7 @@ products.forEach((product) => {
             </div>
 
             <div class="product-price">
-                ${(product.priceCents / 100).toFixed(2)}
+            &#8377; ${(product.priceCents / 100).toFixed(2)}
             </div>
 
             <div class="product-quantity-container">
@@ -87,7 +88,8 @@ products.forEach((product) => {
                 Added
             </div>
 
-            <button class="add-to-cart-button button-primary">
+            <button class="add-to-cart-button button-primary js-add-to-cart"
+            data-product-id="${product.id}">
                 Add to Cart
             </button>
             </div>
@@ -95,10 +97,39 @@ products.forEach((product) => {
 
 })
 
-console.log(productsHTML);
+
 
 //4. add additional class name in the products-grid class name. new additional class name = js-products-grid.
 //5. using DOM we are putting the generated html into the html page inside js-products-grid class
-document.querySelector('.js-products-grid').innerHTML = productsHTML
+document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
 //6. deleted the products in the html page under products-grid class even after the products will be displayed in the page because we generated html in js and injected in html page using DOM.
+
+//8. add event listener to js-add-to-cart. created another class name (js-add-to-cart) to add-to-cart-button button-primary class name for Add to Cart button.
+
+//10.the .dataset property is used to access custom data attributes on an HTML element.
+document.querySelectorAll('.js-add-to-cart').forEach((button) => {
+    button.addEventListener('click', () => {
+        const productId = button.dataset.productId;
+
+        let matchingItem;
+
+        cart.forEach((item) =>{
+            if (productId === item.productId){
+                matchingItem = item;
+            }
+        });
+
+        if (matchingItem){
+            matchingItem.quantity += 1;
+        } else {
+            cart.push({
+                productId: productId,
+                quantity: 1
+            });
+        }
+
+        console.log(cart);
+    });
+});
+
