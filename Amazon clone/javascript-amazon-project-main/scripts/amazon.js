@@ -1,5 +1,6 @@
 import {cart, addToCart} from '../data/cart.js';
 import {products} from '../data/products.js';
+import { formatCurrency } from './utils/money.js';
 
 //create a array (projects) contains objects(items and details). step 7 - instead of adding one by one link data/products.js to create objects by creating another script tag above the amazon.js in the html file
 // const products = [{
@@ -66,7 +67,7 @@ products.forEach((product) => {
             </div>
 
             <div class="product-price">
-            &#8377; ${(product.priceCents / 100).toFixed(2)}
+            &#8377; ${formatCurrency(product.priceCents)}
             </div>
 
             <div class="product-quantity-container">
