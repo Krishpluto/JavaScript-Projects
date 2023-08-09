@@ -1,4 +1,4 @@
-import {cart} from '../data/cart.js';
+import {cart, addToCart} from '../data/cart.js';
 import {products} from '../data/products.js';
 
 //create a array (projects) contains objects(items and details). step 7 - instead of adding one by one link data/products.js to create objects by creating another script tag above the amazon.js in the html file
@@ -100,10 +100,9 @@ products.forEach((product) => {
 
 })
 
-
-
 //4. add additional class name in the products-grid class name. new additional class name = js-products-grid.
 //5. using DOM we are putting the generated html into the html page inside js-products-grid class
+
 document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
 //6. deleted the products in the html page under products-grid class even after the products will be displayed in the page because we generated html in js and injected in html page using DOM.
@@ -111,36 +110,24 @@ document.querySelector('.js-products-grid').innerHTML = productsHTML;
 //8. add event listener to js-add-to-cart. created another class name (js-add-to-cart) to add-to-cart-button button-primary class name for Add to Cart button.
 
 //10.the .dataset property is used to access custom data attributes on an HTML element.
+
+
+function updateCartQuantity(){
+    let cartQuantity = 0;
+
+    cart.forEach((cartItem) => {
+        cartQuantity += cartItem.quantity;
+    });
+
+    // update the cart quantity 
+    document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+}
+
 document.querySelectorAll('.js-add-to-cart').forEach((button) => {
     button.addEventListener('click', () => {
         const productId = button.dataset.productId;
-
-        let matchingItem;
-
-        cart.forEach((item) =>{
-            if (productId === item.productId){
-                matchingItem = item;
-            }
-        });
-
-        if (matchingItem){
-            matchingItem.quantity += 1;
-        } else {
-            cart.push({
-                productId: productId,
-                quantity: 1
-            });
-        }
-
-        let cartQuantity = 0;
-
-        cart.forEach((item) => {
-            cartQuantity += item.quantity;
-        });
-
-        // update the cart quantity 
-        document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
-
-    });
+        addToCart(productId);
+        updateCartQuantity();  
+     });
 });
 
