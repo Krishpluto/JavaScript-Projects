@@ -1,4 +1,5 @@
 import {cart} from '../data/cart.js';
+import {products} from '../data/products.js';
 
 //create a array (projects) contains objects(items and details). step 7 - instead of adding one by one link data/products.js to create objects by creating another script tag above the amazon.js in the html file
 // const products = [{
